@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-dark">
+  <div class="container-fluid">
+    <h1 style="color:aliceblue; margin-left: 20px; margin-right: 20px;">Product Store</h1>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+      
+        <li class="nav-item">
+          <a style="color: aliceblue;" (click)="gotoDash()">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a style="color:aliceblue" (click)="addProduct()">Add Product</a>
+        </li>
+      </ul>
+
+      <div class="d-flex">
+      <!----  <li class="nav-item"> --> 
+     <!-----  <a  (click)="orders()" style="color:aliceblue;  margin-right: 20px;">My Orders</a>  -->
+     <!----  </li> --->
+     
+     <li>
+        <a (click)="cart()" style="color:white; margin-right: 20px;"> 
+          <mat-icon style="color: aliceblue;" >add_shopping_cart</mat-icon>
+          <span style=" font-size: 10px; position: absolute;" class="badge bg-danger">{{badgenumber}}</span>
+        </a>
+      </li>
+         <li>
+        <a  (click)="orders()" style="color:aliceblue;  margin-right: 20px;">My Orders</a>
+      </li>
+        <li>
+        <button class="btn btn-primary" routerLink="/login">Logout</button>
+      </li>
+     
+      </div>
+    </div>
+  
+  </div>
+</nav>
